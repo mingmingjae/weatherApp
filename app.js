@@ -28,9 +28,7 @@ app.get("/", (req, res) => {
         const ctof = (temp * 9) / 5 + 32;
         const symbol = weatherData.weather[0].icon;
         const icon = "http://openweathermap.org/img/wn/" + symbol + "@2x.png";
-        //   console.log(ctof);
         const description = weatherData.weather[0].description;
-        //   console.log(description);
         res.write("<h1>The weather is currently " + description + "</h1>");
         res.write(
           "<h1>The temperature in " +
@@ -42,7 +40,7 @@ app.get("/", (req, res) => {
         res.write("<img src=" + icon + ">");
       });
     });
-    res.send("Server is now running.");
+    // res.send("Server is now running.");
   });
 });
 
